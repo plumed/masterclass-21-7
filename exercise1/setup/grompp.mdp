@@ -1,0 +1,38 @@
+integrator               = md
+dt                       = 0.002
+nsteps                   = 20000               ;number of steps
+nstxout                  = 
+nstvout                  = 
+nstlog                   = 100
+nstenergy                = 100
+nstxtcout                = 500
+xtc_grps                 = System     ;group(s) to write to xtc trajectory
+energygrps               = System       ;group(s) to write to energy file 
+nstlist                  = 10                   ;Frequency to update the neighbor list (and the long-range forces, 
+                                                ;when using twin-range cut-off's). 
+ns_type                  = grid                 ;Make a grid in the box and only check atoms in neighboring grid cells 
+                                                ;when constructing a new neighbor list every nstlist steps. 
+cutoff-scheme=Verlet
+coulombtype = PME 
+rvdw =  1.0
+rcoulomb =  1.0
+;fourierspacing = 0.12 
+pbc                      = xyz                  ; Periodic boudary conditions in all the directions 
+tcoupl                   = v-rescale            ;Temperature coupling
+tc-grps                  = System
+tau_t                    = 0.1 
+ref_t                    = 300 
+
+Pcoupl                   = Parrinello-Rahman
+Pcoupltype               = isotropic
+tau_p                    = 2.0
+nstpcouple               = 10
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+refcoord_scaling         = no
+continuation             = yes
+gen_vel                  = no                   ;Velocity generation
+gen_temp                 = 300
+gen_seed                 = -1
+;Constrain all bonds
+constraints              = h-bonds
