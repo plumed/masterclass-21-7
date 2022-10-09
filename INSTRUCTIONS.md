@@ -19,7 +19,7 @@ Once you have completed this Masterclass you will be able to:
  
 ## Setting up PLUMED
 
-For this masterclass you will need versions of PLUMED and GROMACS that are compiled using the MPI library.  You shoudl thus follow the instructions that are reported for [this earlier masterclass](../../21/005/NAVIGATION.html).
+For this masterclass you will need versions of PLUMED and GROMACS that are compiled using the MPI library.  You shoudl thus follow the instructions that are reported for [this earlier masterclass](../../../21/005/NAVIGATION.html).
 
 Natively-compiled GROMACS and PLUMED will be significantly faster than the conda versions that we are providing.  Since we are focusing on performance here, this might be the right time to learn how to install them on your own.
 
@@ -121,7 +121,7 @@ In the `data/exercise1` folder of the `GitHub` repository of this Masterclass, y
 ```plumed
 # vim:ft=plumed
 NA: GROUP ATOMS=1
-CL: GROUP ATOMS=
+CL: GROUP ATOMS=2
 WAT: GROUP ATOMS=3-8544:3
 d: DISTANCE ATOMS=NA,CL
 cn: COORDINATION GROUPA=1 GROUPB=WAT R_0=0.3
@@ -182,9 +182,9 @@ As a final step, analyze the simulations performed so far to compute the standar
 
 ### Exercise 2: Folding of the C-terminal domain (CTD) of the RfaH virulence factor
 
-In this exercise, we will work with the C-terminal domain (CTD) of the RfaH virulence factor from _Escherichia coli_ that was introduced in the fourth exercise of [this lesson](../../21/004/NAVIGATION.html).  This part of the system, which we refer to as RfaH-CTD, undergoes a dramatic conformational transformation from β-barrel to α-helical, which is stabilized by the N-terminal domain of the RfaH virulence factor.  This transition is illustrated in the following figure: 
+In this exercise, we will work with the C-terminal domain (CTD) of the RfaH virulence factor from _Escherichia coli_ that was introduced in the fourth exercise of [this lesson](../../../21/004/NAVIGATION.html).  This part of the system, which we refer to as RfaH-CTD, undergoes a dramatic conformational transformation from β-barrel to α-helical, which is stabilized by the N-terminal domain of the RfaH virulence factor.  This transition is illustrated in the following figure: 
 
-![Structural transformation of the RfaH-CTD. Domain dissociation is triggered upon binding of the NTD (gray) to its target ops (operon polarity suppressor) element DNA, relieving the autoinhibited state and allowing the transformation of the CTD (colored) from an α-helical hairpin (A) towards a five-stranded β-barrel (B). Note that the NTD and CTD are connected by a linker that does not order within the crystals and therefore is not shown in the figure.](RfaH-CTD.png)
+![Structural transformation of the RfaH-CTD. Domain dissociation is triggered upon binding of the NTD (gray) to its target ops (operon polarity suppressor) element DNA, relieving the autoinhibited state and allowing the transformation of the CTD (colored) from an α-helical hairpin (A) towards a five-stranded β-barrel (B). Note that the NTD and CTD are connected by a linker that does not order within the crystals and therefore is not shown in the figure.](figures/RfaH-CTD.png)
 
 RfaH-CTD  is simulated using a simplified, structure-based potential, called [SMOG](https://smog-server.org).  The SMOG energy function has been designed to have two local minima corresponding to the β-barrel and α-helical states of RfaH-CTD.  To achieve this goal, the SMOG energy function promotes native contacts, i.e. interactions that are present in the native structure(s).  When using structure-based force fields, a function of the coordinates that is correlated with the energy of the system, such as the total number of native contacts, has been shown to be a good CV for enhanced-sampling simulations. Unfortunately, these types of CVs often involve a large number of atoms and are therefore computationally expensive to calculate at every step of the simulation. In this exercise, we will learn how to write and optimize these types of CVs.
 
