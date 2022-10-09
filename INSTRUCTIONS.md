@@ -19,7 +19,7 @@ Once you have completed this Masterclass you will be able to:
  
 ## Setting up PLUMED
 
-For this masterclass you will need versions of PLUMED and GROMACS that are compiled using the MPI library.  You shoudl thus follow the instructions that are reported for [this earlier masterclass](../../../21/005/NAVIGATION.html).
+For this masterclass you will need versions of PLUMED and GROMACS that are compiled using the MPI library.  You shoudl thus follow the instructions that are reported for [this earlier masterclass](../../../21/005/data/NAVIGATION.html).
 
 Natively-compiled GROMACS and PLUMED will be significantly faster than the conda versions that we are providing.  Since we are focusing on performance here, this might be the right time to learn how to install them on your own.
 
@@ -182,7 +182,7 @@ As a final step, analyze the simulations performed so far to compute the standar
 
 ### Exercise 2: Folding of the C-terminal domain (CTD) of the RfaH virulence factor
 
-In this exercise, we will work with the C-terminal domain (CTD) of the RfaH virulence factor from _Escherichia coli_ that was introduced in the fourth exercise of [this lesson](../../../21/004/NAVIGATION.html).  This part of the system, which we refer to as RfaH-CTD, undergoes a dramatic conformational transformation from β-barrel to α-helical, which is stabilized by the N-terminal domain of the RfaH virulence factor.  This transition is illustrated in the following figure: 
+In this exercise, we will work with the C-terminal domain (CTD) of the RfaH virulence factor from _Escherichia coli_ that was introduced in the fourth exercise of [this lesson](../../../21/004/data/NAVIGATION.html).  This part of the system, which we refer to as RfaH-CTD, undergoes a dramatic conformational transformation from β-barrel to α-helical, which is stabilized by the N-terminal domain of the RfaH virulence factor.  This transition is illustrated in the following figure: 
 
 ![Structural transformation of the RfaH-CTD. Domain dissociation is triggered upon binding of the NTD (gray) to its target ops (operon polarity suppressor) element DNA, relieving the autoinhibited state and allowing the transformation of the CTD (colored) from an α-helical hairpin (A) towards a five-stranded β-barrel (B). Note that the NTD and CTD are connected by a linker that does not order within the crystals and therefore is not shown in the figure.](figures/RfaH-CTD.png)
 
@@ -242,7 +242,7 @@ The objectives of this exercise are to:
 
 1. optimize the distance-based CV provided in the template PLUMED input file. **The user should report the speedup obtained with the optimized CV with respect to the one defined in the provided input file**;
 2. optimize the performances of well-tempered metadynamics. 
-3. evaluate the stability of the β-barrel state of RfaH-CTD (with error estimate). Have a look at [this earlier lessonr](../../21/004/NAVIGATION.html) for more info.
+3. evaluate the stability of the β-barrel state of RfaH-CTD (with error estimate). Have a look at [this earlier lessonr](../../21/004/data/NAVIGATION.html) for more info.
 
 Suggestions:
 - the users should consult the PLUMED manual in order to optimize the proposed CV;
