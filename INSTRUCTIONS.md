@@ -242,7 +242,7 @@ The objectives of this exercise are to:
 
 1. optimize the distance-based CV provided in the template PLUMED input file. **The user should report the speedup obtained with the optimized CV with respect to the one defined in the provided input file**;
 2. optimize the performances of well-tempered metadynamics. 
-3. evaluate the stability of the β-barrel state of RfaH-CTD (with error estimate). Have a look at [this earlier lessonr](../../21/004/data/NAVIGATION.html) for more info.
+3. evaluate the stability of the β-barrel state of RfaH-CTD (with error estimate). Have a look at [this earlier lessonr](../../../21/004/data/NAVIGATION.html) for more info.
 
 Suggestions:
 - the users should consult the PLUMED manual in order to optimize the proposed CV;
