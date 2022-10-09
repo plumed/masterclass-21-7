@@ -198,6 +198,7 @@ In the `data/exercise2` folder of the [GitHub](https://github.com/plumed/masterc
 The provided PLUMED input file looks as follows:
 
 ```plumed
+#SOLUTIONFILE=work/plumed_ex1.dat
 # reconstruct molecule
 WHOLEMOLECULES ENTITY0=1-330
 
